@@ -80,7 +80,7 @@ contract Ssal {
         return proposerSets[proposerSetId].sequencerAddresses;
     }
 
-    function isRegistered(bytes32 proposerSetId) public view returns(bool) {      
-        return proposerSets[proposerSetId].isRegisteredSequencer[msg.sender];
+    function isRegistered(bytes32 proposerSetId, address sequencerAddress) public view returns(bool) {      
+        return proposerSets[proposerSetId].isRegisteredSequencer[sequencerAddress];
     }
 }
