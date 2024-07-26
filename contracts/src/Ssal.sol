@@ -79,4 +79,8 @@ contract Ssal {
     function getSequencerList(bytes32 proposerSetId) public view returns(address[MAX_SEQUENCER_COUNT] memory) {      
         return proposerSets[proposerSetId].sequencerAddresses;
     }
+
+    function isRegistered(bytes32 proposerSetId) public view returns(bool) {      
+        return proposerSets[proposerSetId].isRegisteredSequencer[msg.sender];
+    }
 }
