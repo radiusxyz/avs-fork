@@ -133,6 +133,7 @@ contract Ssal {
                 count++;
             }
         }
+        return validSequencers;
     }
 
     function isRegistered(
